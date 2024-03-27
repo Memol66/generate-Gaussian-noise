@@ -1,0 +1,19 @@
+import java.util.Random;
+
+public class GaussianNoiseGenerator {
+    public static void main(String[] args) {
+        // Settings
+        double mu = 2; // Mean
+        double sigma = Math.sqrt(3); // Standard deviation
+        int numSamples = 1000; // Number of samples
+
+        // Create a random number generator
+        Random random = new Random();
+
+        // Generate and display Gaussian noise
+        for (int i = 0; i < numSamples; i++) {
+            double noise = mu + sigma * random.nextGaussian();
+            System.out.println(noise);
+        }
+    }
+}
